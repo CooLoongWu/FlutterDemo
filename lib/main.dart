@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/sec.dart';
 
 void main() => runApp(new MyApp());
 
@@ -56,6 +57,13 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _onPressed() {
+    Navigator.push(
+        context,
+        new MaterialPageRoute(
+            builder: (context) => new MySecPage(title: "哇哈哈")));
+  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -96,6 +104,8 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.display1,
             ),
+            new IconButton(
+                icon: new Icon(Icons.skip_next), onPressed: _onPressed)
           ],
         ),
       ),
