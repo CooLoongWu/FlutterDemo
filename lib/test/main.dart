@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/sec.dart';
+import 'package:flutter_app/test/fourth.dart';
+import 'package:flutter_app/test/third.dart';
 
 void main() => runApp(new MyApp());
 
@@ -58,10 +59,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _onPressed() {
-    Navigator.push(
-        context,
-        new MaterialPageRoute(
-            builder: (context) => new MySecPage(title: "哇哈哈")));
+    Navigator.push(context,
+        new MaterialPageRoute(builder: (context) => new PlatformView()));
   }
 
   @override
